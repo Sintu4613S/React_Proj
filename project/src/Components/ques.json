@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Which Tailwind CSS class applies an arbitrary width of exactly 320 pixels?",
+    "options": [
+      "w-320",
+      "width-[320px]",
+      "w-[320px]",
+      "w-custom-320"
+    ],
+    "answer": "w-[320px]"
+  },
+  {
+    "id": 2,
+    "question": "What is the correct syntax for a CSS calculation inside a Tailwind arbitrary value utility?",
+    "options": [
+      "h-[calc(100vw-50px)]",
+      "h-[calc(100vh-50px)]",
+      "h-calc[100vh-50px]",
+      "h-[calc(100vh_-_50px)]"
+    ],
+    "answer": "h-[calc(100vh-50px)]"
+  },
+  {
+    "id": 3,
+    "question": "Which hook should you use in React to execute side effects like fetching data or subscribing to events?",
+    "options": [
+      "useState",
+      "useReducer",
+      "useMemo",
+      "useEffect"
+    ],
+    "answer": "useEffect"
+  },
+  {
+    "id": 4,
+    "question": "In modern JavaScript, which array method returns a brand new array filled with elements that pass a specific test condition?",
+    "options": [
+      "filter()",
+      "map()",
+      "forEach()",
+      "find()"
+    ],
+    "answer": "filter()"
+  },
+  {
+    "id": 5,
+    "question": "Which HTML5 element is used to display a self-contained piece of content, like a blog post, forum post, or news article?",
+    "options": [
+      "<section>",
+      "<div class=\"article\">",
+      "<article>",
+      "<aside>"
+    ],
+    "answer": "<article>"
+  },
+  {
+    "id": 6,
+    "question": "What is the primary way to pass data from a parent component to a child component in React?",
+    "options": [
+      "State",
+      "Props",
+      "PropTypes",
+      "Refs"
+    ],
+    "answer": "Props"
+  },
+  {
+    "id": 7,
+    "question": "Which hook is used to handle side effects in a React functional component?",
+    "options": [
+      "useState",
+      "useContext",
+      "useEffect",
+      "useReducer"
+    ],
+    "answer": "useEffect"
+  },
+  {
+    "id": 8,
+    "question": "What is the purpose of the `key` prop in React lists?",
+    "options": [
+      "To style list items",
+      "To uniquely identify elements and help React optimize rendering",
+      "To pass data to the parent component",
+      "To define the type of component"
+    ],
+    "answer": "To uniquely identify elements and help React optimize rendering"
+  },
+  {
+    "id": 9,
+    "question": "What are React Hooks?",
+    "options": [
+      "Functions that let you use state and other React features without writing a class",
+      "Special HTML tags used by React",
+      "Methods to handle backend databases",
+      "Higher-order functions used for styling"
+    ],
+    "answer": "Functions that let you use state and other React features without writing a class"
+  },
+  {
+    "id": 10,
+    "question": "Which tool is used to transpile modern JavaScript/JSX code into a format that older browsers can understand?",
+    "options": [
+      "Webpack",
+      "Babel",
+      "npm",
+      "Vite"
+    ],
+    "answer": "Babel"
+  }
+]

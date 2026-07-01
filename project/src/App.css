@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+} */
+
+.App-link {
+  color: #61dafb;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  padding: 10px, 20px !important;
+  color: white !important;
+  border-radius: 5px;
+  background-color: orangered;
+  box-shadow: 0, 0, 0, 0.3 black inset;
+  border-radius: 4px;
+}
+
+.Pop {
+  width: 650px;
+  height: 350px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: auto;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 8px;
+
+  /*
+  Main Note: Parent -> pos- relative; 
+  two more way    
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%)
+   OR
+   inset:0 -->top,left,right,bottom is set 0.
+   place-self:center;
+  */
+}
+
+.Pcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 4px;
+  background-color: transparent;
+  box-shadow: 0, 0, 0, 0.2 black inset;
+  border-radius: 4px;
+}
