@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Sintu4613S/React_Proj/issues"
   },
-  "homepage": "https://github.com/Sintu4613S/React_Proj#readme"
+  "homepage": "https://github.com/Sintu4613S/React_Proj#readme",
+  "workspaces": [
+    "ecom-proj",
+    "my_proj",
+    "my-app",
+    "project"
+  ]
 }
