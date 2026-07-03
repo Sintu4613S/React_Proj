@@ -1,13 +1,24 @@
+//import { useEffect } from "react"
 
 const Apilearn = () => {
   const API = 'https://jsonplaceholder.typicode.com/users'
+  const fetchData = async () => {
+    const response = await fetch(API)
+    let data = await response.json()
+    // console.log(response)
+    console.log(data)
+  }
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
 
-  let response = fetch(API)
-  console.log(response)
   return (
     <>
-      <h1>Hello</h1>
+      <button className="btn" onClick={fetchData}>FetchData</button>
+
     </>
   )
+
 }
+
 export default Apilearn
