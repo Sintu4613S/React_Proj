@@ -13,7 +13,9 @@ const Apilearn = () => {
     // //console.log(data)
     //setuserData(data)
     const response = await axios.get(API)
-    console.log(response.data)
+    let data = response.data
+    setuserData(data)
+    //console.log(response.data)
     //console.log(axios.isCancel("something"));
   }
   // useEffect(() => {
