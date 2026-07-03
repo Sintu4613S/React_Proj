@@ -1,16 +1,20 @@
 //import { useEffect } from "react"
 
 import { useState } from "react"
+import axios from "axios";
 
 const Apilearn = () => {
   const [userdata, setuserData] = useState([])
   const API = 'https://jsonplaceholder.typicode.com/users'
   const fetchData = async () => {
-    const response = await fetch(API)
-    let data = await response.json()
-    // console.log(response)
-    //console.log(data)
-    setuserData(data)
+    // const response = await fetch(API)
+    // let data = await response.json()
+    // // console.log(response)
+    // //console.log(data)
+    //setuserData(data)
+    const response = await axios.get(API)
+    console.log(response.data)
+    //console.log(axios.isCancel("something"));
   }
   // useEffect(() => {
   //   fetchData()
