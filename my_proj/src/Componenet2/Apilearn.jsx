@@ -19,19 +19,17 @@ const Apilearn = () => {
   return (
     <>
       <button className="btn" onClick={fetchData}>FetchData</button>
-      {userdata !== null ?
-        <pre>
-          {JSON.stringify(userdata, null, 2)}
-        </pre>
-        :
-        null
-      }
+      {/* <pre>
+        {JSON.stringify(userdata, null, 2)}
+      </pre> */}
 
-      {/* {userdata.map((user) => {
+      {userdata.map((user) => {
         return (
-          
+          <li>
+            Users:{user.name}
+          </li>
         )
-      })} */}
+      })}
 
     </>
   )
