@@ -7,7 +7,7 @@ const Apilearn = () => {
   const [userdata, setuserData] = useState([])
   const API = 'https://jsonplaceholder.typicode.com/users'
   const fetchData = async () => {
-    // const response = await fetch(API)
+    // const response = await fetch(API)s
     // let data = await response.json()
     // // console.log(response)
     // //console.log(data)
@@ -31,7 +31,7 @@ const Apilearn = () => {
 
       {userdata.map((user) => {
         return (
-          <li>
+          <li key={user.id}>
             Users:{user.name}
           </li>
         )
