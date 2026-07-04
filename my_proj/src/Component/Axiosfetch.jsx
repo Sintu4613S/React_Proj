@@ -46,10 +46,10 @@ const Postdata = () => {
       <br /><br />
       {/* Form for Data take From the User */}
       <label htmlFor="nm">Name:
-        <input type="text" id='nm' placeholder='Enter Your Name' value={userDetails.name} name='name' onChange={handleOnchange} className="text-white" />
+        <input type="text" id='nm' placeholder='Enter Your Name' value={userDetails.name} name='name' onChange={handleOnchange} className="text-white " />
       </label><br /><br />
       <label htmlFor="ag">Age:
-        <input type="number" id='ag' placeholder='Enter Your Age' value={userDetails.age} name='age' onChange={handleOnchange} className="text-white" />
+        <input type="number" id='ag' placeholder='Enter Your Age' value={userDetails.age} name='age' onChange={handleOnchange} className="text-white " />
       </label>
       <br /><br />
       <button onClick={postData} className="btn mx-2">PostData</button>
