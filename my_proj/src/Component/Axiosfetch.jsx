@@ -5,8 +5,8 @@ import axios from 'axios'
 const Postdata = () => {
   const [users, setUsers] = useState([])
   const [userDetails, setUserdetails] = useState({
-    name: " ",
-    Age: " "
+    name: "",
+    age: ""
   })
   //*******Getting the Fetch Data>>>******
   const fetchData = async () => {
@@ -21,18 +21,16 @@ const Postdata = () => {
     const response = await axios({
       url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
       method: 'post',
-      data: {
-        name: "Sintu Kumar",
-        Age: 21
-      }
+      data: userDetails
     })
     console.log(response.data)
   }
   // ********Handling The File....********
   const handleOnchange = (e) => {
-    console.log(e.target.value)
-
+    const { name, value } = e.target;
+    setUserdetails(prevDetails => ({ ...prevDetails, [name]: value }))
   }
+  console.log(userDetails)
   // const deleteData = async (id) => {
   //   const response = await axios({
   //     url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
@@ -48,10 +46,10 @@ const Postdata = () => {
       <br /><br />
       {/* Form for Data take From the User */}
       <label htmlFor="nm">Name:
-        <input type="text" id='nm' placeholder='Enter Your Name ' name='name' onChange={handleOnchange} />
+        <input type="text" id='nm' placeholder='Enter Your Name' value={userDetails.name} name='name' onChange={handleOnchange} className="text-white" />
       </label><br /><br />
       <label htmlFor="ag">Age:
-        <input type="number" id='ag' placeholder='Enter YourAge ' name='age' onChange={handleOnchange} />
+        <input type="number" id='ag' placeholder='Enter Your Age' value={userDetails.age} name='age' onChange={handleOnchange} className="text-white" />
       </label>
       <br /><br />
       <button onClick={postData} className="btn mx-2">PostData</button>
