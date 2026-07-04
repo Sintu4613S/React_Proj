@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const Postdata = () => {
   const [users, setUsers] = useState([])
+
   const fetchData = async () => {
     const response = await axios({
       url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
@@ -11,10 +12,32 @@ const Postdata = () => {
     const data = response.data
     setUsers(data)
   }
+  const postData = async () => {
+    const response = await axios({
+      url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
+      method: 'post',
+      data: {
+        name: "Sintu Kumar",
+        Age: 21
+      }
+    })
+    console.log(response.data)
+
+  }
+  // const deleteData = async (id) => {
+  //   const response = await axios({
+  //     url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
+  //     method: 'delete',
+  //   })
+  //   console.log(response.data)
+
+  // }
   console.log(users)
   return (
     <>
-      <button onClick={fetchData} className="btn">FetchData2</button>
+      <button onClick={fetchData} className="btn mx-2">FetchData2</button>
+      <button onClick={postData} className="btn mx-2">PostData</button>
+      {/* <button onClick={deleteData} className="btn mx-2">DeleteData</button> */}
       {users.map((userDetails) => {
         return (
           <li key={userDetails.id} className='bg-gray-700 p-6 rounded-lg my-2 '>
