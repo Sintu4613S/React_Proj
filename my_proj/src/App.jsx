@@ -1,5 +1,6 @@
 import './App.css'
 import Apilearn from './Componenet2/Apilearn'
+import Axiosfetch from './Component/Axiosfetch'
 //import RandomPass from './Component/RandomPass'
 //import Card from "./Component/Card"
 //import Formhandle from "./Component/Formhandle"
@@ -23,7 +24,8 @@ function App() {
       {/* <SelectDrop /> */}
       {/* <UseRef /> */}
       {/* <RandomPass /> */}
-      <Apilearn />
+      {/* <Apilearn /> */}
+      <Axiosfetch />
 
 
     </>
