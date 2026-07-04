@@ -4,7 +4,11 @@ import axios from 'axios'
 
 const Postdata = () => {
   const [users, setUsers] = useState([])
-
+  const [userDetails, setUserdetails] = useState({
+    name: " ",
+    Age: " "
+  })
+  //*******Getting the Fetch Data>>>******
   const fetchData = async () => {
     const response = await axios({
       url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
@@ -12,6 +16,7 @@ const Postdata = () => {
     const data = response.data
     setUsers(data)
   }
+  //>***** Posting the Data>>..*******
   const postData = async () => {
     const response = await axios({
       url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
@@ -22,6 +27,10 @@ const Postdata = () => {
       }
     })
     console.log(response.data)
+  }
+  // ********Handling The File....********
+  const handleOnchange = (e) => {
+    console.log(e.target.value)
 
   }
   // const deleteData = async (id) => {
@@ -36,6 +45,15 @@ const Postdata = () => {
   return (
     <>
       <button onClick={fetchData} className="btn mx-2">FetchData2</button>
+      <br /><br />
+      {/* Form for Data take From the User */}
+      <label htmlFor="nm">Name:
+        <input type="text" id='nm' placeholder='Enter Your Name ' name='name' onChange={handleOnchange} />
+      </label><br /><br />
+      <label htmlFor="ag">Age:
+        <input type="number" id='ag' placeholder='Enter YourAge ' name='age' onChange={handleOnchange} />
+      </label>
+      <br /><br />
       <button onClick={postData} className="btn mx-2">PostData</button>
       {/* <button onClick={deleteData} className="btn mx-2">DeleteData</button> */}
       {users.map((userDetails) => {
