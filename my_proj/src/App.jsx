@@ -1,5 +1,5 @@
 import './App.css'
-import Apilearn from './Componenet2/Apilearn'
+//import Apilearn from './Componenet2/Apilearn'
 import Axiosfetch from './Component/Axiosfetch'
 //import RandomPass from './Component/RandomPass'
 //import Card from "./Component/Card"
