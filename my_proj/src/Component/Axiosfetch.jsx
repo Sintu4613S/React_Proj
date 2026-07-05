@@ -18,12 +18,19 @@ const Postdata = () => {
   }
   //>***** Posting the Data>>..*******
   const postData = async () => {
-    const response = await axios({
+    await axios({
       url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
       method: 'post',
       data: userDetails
     })
-    console.log(response.data)
+    fetchData()
+    setUserdetails({
+      name: "",
+      age: ""
+    })
+
+    // console.log(response.data)
+
   }
   // ********Handling The File....********
   const handleOnchange = (e) => {
@@ -31,6 +38,9 @@ const Postdata = () => {
     setUserdetails(prevDetails => ({ ...prevDetails, [name]: value }))
   }
   console.log(userDetails)
+  const handleEdit = () => {
+
+  }
   // const deleteData = async (id) => {
   //   const response = await axios({
   //     url: 'https://6a489aaca033dcb98d64b0ff.mockapi.io/users',
@@ -39,7 +49,7 @@ const Postdata = () => {
   //   console.log(response.data)
 
   // }
-  console.log(users)
+  //console.log(users)
   return (
     <>
       <button onClick={fetchData} className="btn mx-2">FetchData2</button>
@@ -52,13 +62,14 @@ const Postdata = () => {
         <input type="number" id='ag' placeholder='Enter Your Age' value={userDetails.age} name='age' onChange={handleOnchange} className="text-white " />
       </label>
       <br /><br />
-      <button onClick={postData} className="btn mx-2">PostData</button>
+      <button disabled={!userDetails.name?.trim()} onClick={postData} className="btn mx-2">PostData</button>
       {/* <button onClick={deleteData} className="btn mx-2">DeleteData</button> */}
       {users.map((userDetails) => {
         return (
           <li key={userDetails.id} className='bg-gray-700 p-6 rounded-lg my-2 '>
             <p>Name:{userDetails.name}</p>
-            <p>Age:{userDetails.Age}</p>
+            <p>Age:{userDetails.age}</p>
+            <button className='btn' onClick={handleEdit}>Edit</button>
           </li>
 
 
