@@ -1,6 +1,7 @@
 import './App.css'
+import BasicRouter from './Componenet2/Router/BasicRouter'
 //import Apilearn from './Componenet2/Apilearn'
-import Axiosfetch from './Component/Axiosfetch'
+//import Axiosfetch from './Component/Axiosfetch'
 //import RandomPass from './Component/RandomPass'
 //import Card from "./Component/Card"
 //import Formhandle from "./Component/Formhandle"
@@ -25,7 +26,8 @@ function App() {
       {/* <UseRef /> */}
       {/* <RandomPass /> */}
       {/* <Apilearn /> */}
-      <Axiosfetch />
+      {/* <Axiosfetch /> */}
+      <BasicRouter />
 
 
     </>
