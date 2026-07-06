@@ -11,6 +11,8 @@ import BasicRouter from './Componenet2/Router/NavBar'
 //import Checkbox1 from './Component/Checkbox1'
 //import SelectDrop from './Component/SelectDrop'
 //import UseRef from './Component/UseRef'
+//import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 
 function App() {
@@ -27,7 +29,15 @@ function App() {
       {/* <RandomPass /> */}
       {/* <Apilearn /> */}
       {/* <Axiosfetch /> */}
-      <BasicRouter />
+      {/* <Routes>
+        <Route>
+
+        </Route>
+
+      </Routes> */}
+      <BrowserRouter>
+        <BasicRouter />
+      </BrowserRouter>
 
 
     </>
