@@ -1,5 +1,5 @@
 import './App.css'
-import BasicRouter from './Componenet2/Router/BasicRouter'
+import BasicRouter from './Componenet2/Router/NavBar'
 //import Apilearn from './Componenet2/Apilearn'
 //import Axiosfetch from './Component/Axiosfetch'
 //import RandomPass from './Component/RandomPass'
