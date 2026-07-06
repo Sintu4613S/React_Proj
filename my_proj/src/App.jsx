@@ -1,4 +1,8 @@
 import './App.css'
+import About from './Componenet2/Router/About'
+import Blog from './Componenet2/Router/Blog'
+import Contact from './Componenet2/Router/Contact'
+import Home from './Componenet2/Router/Home'
 import BasicRouter from './Componenet2/Router/NavBar'
 //import Apilearn from './Componenet2/Apilearn'
 //import Axiosfetch from './Component/Axiosfetch'
@@ -11,8 +15,7 @@ import BasicRouter from './Componenet2/Router/NavBar'
 //import Checkbox1 from './Component/Checkbox1'
 //import SelectDrop from './Component/SelectDrop'
 //import UseRef from './Component/UseRef'
-//import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 
 function App() {
@@ -29,15 +32,15 @@ function App() {
       {/* <RandomPass /> */}
       {/* <Apilearn /> */}
       {/* <Axiosfetch /> */}
-      {/* <Routes>
-        <Route>
+      <BasicRouter />
 
-        </Route>
+      <Routes>
+        <Route index path='/' element={<Home />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='about' element={<About />} />
+        <Route path='contact' element={<Contact />} />
+      </Routes>
 
-      </Routes> */}
-      <BrowserRouter>
-        <BasicRouter />
-      </BrowserRouter>
 
 
     </>
