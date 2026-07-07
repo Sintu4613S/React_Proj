@@ -16,6 +16,7 @@ import BasicRouter from './Componenet2/Router/NavBar'
 //import SelectDrop from './Component/SelectDrop'
 //import UseRef from './Component/UseRef'
 import { Routes, Route } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 
 function App() {
@@ -35,10 +36,11 @@ function App() {
       <BasicRouter />
 
       <Routes>
-        <Route index path='/' element={<Home />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        {/* Use the Navigate component Re-direct  the page . */}
+        <Route path="/contact" element={<Navigate to={'/'} />} />
       </Routes>
 
 
