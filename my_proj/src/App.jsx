@@ -40,7 +40,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         {/* Use the Navigate component Re-direct  the page . */}
-        <Route path="/contact" element={<Navigate to={'/'} />} />
+        {/* Use  replace to clean the history of contact */}
+        <Route path="/contact" element={<Navigate to={'/'} replace />} />
       </Routes>
     </>
   )
