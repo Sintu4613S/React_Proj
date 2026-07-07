@@ -17,7 +17,8 @@ import BasicRouter from './Componenet2/Router/NavBar'
 //import UseRef from './Component/UseRef'
 import { Routes, Route } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
-
+import A1 from './Componenet2/Router/A1'
+import A2 from './Componenet2/Router/A2'
 
 function App() {
   return (
@@ -38,7 +39,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} >
+          <Route path='a1' element={<A1 />} />
+          <Route path='a2' element={<A2 />} />
+        </Route>
         {/* Use the Navigate component Re-direct  the page . */}
         {/* Use  replace to clean the history of contact */}
         <Route path="/contact" element={<Navigate to={'/'} replace />} />
