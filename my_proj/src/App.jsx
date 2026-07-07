@@ -1,7 +1,7 @@
 import './App.css'
 import About from './Componenet2/Router/About'
 import Blog from './Componenet2/Router/Blog'
-import Contact from './Componenet2/Router/Contact'
+//import Contact from './Componenet2/Router/Contact'
 import Home from './Componenet2/Router/Home'
 import BasicRouter from './Componenet2/Router/NavBar'
 //import Apilearn from './Componenet2/Apilearn'
@@ -42,9 +42,6 @@ function App() {
         {/* Use the Navigate component Re-direct  the page . */}
         <Route path="/contact" element={<Navigate to={'/'} />} />
       </Routes>
-
-
-
     </>
   )
 }
