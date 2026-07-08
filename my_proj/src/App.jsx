@@ -19,6 +19,8 @@ import { Routes, Route } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import A1 from './Componenet2/Router/A1'
 import A2 from './Componenet2/Router/A2'
+import Navbar2 from './Componenet2/Router/NewRouter/Navbar2'
+
 
 function App() {
   return (
@@ -34,22 +36,24 @@ function App() {
       {/* <RandomPass /> */}
       {/* <Apilearn /> */}
       {/* <Axiosfetch /> */}
-      <BasicRouter />
+      {/* <BasicRouter /> */}
+      <Navbar2 />
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} >
           <Route path='a1' element={<A1 />} />
           <Route path='a2' element={<A2 />} />
-        </Route>
-        {/* Use the Navigate component Re-direct  the page . */}
-        {/* Use  replace to clean the history of contact */}
-        <Route path="/contact" element={<Navigate to={'/'} replace />} />
-      </Routes>
+        </Route> */}
+      {/* Use the Navigate component Re-direct  the page . */}
+      {/* Use  replace to clean the history of contact */}
+      {/* <Route path="/contact" element={<Navigate to={'/'} replace />} />
+      </Routes> */}
     </>
   )
 }
+
 
 
 export default App
