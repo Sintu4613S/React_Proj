@@ -9,6 +9,7 @@ createRoot(document.getElementById('root')).render(
      <App />
  </BrowserRouter> */}
 
+    {/* we Use the only App for the using the new Method instead of Router and Routes for Rendering the Navbar.  */}
     <App />
 
   </>
