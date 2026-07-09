@@ -25,6 +25,7 @@ import Home2 from './Componenet2/NewRouter/Home2';
 // import A2 from './Componenet2/Router/A2'
 //import Navbar2 from './Componenet2/NewRouter/Navbar2'
 import Layout from './Componenet2/NewRouter/Layout';
+import Form from './Componenet2/NewRouter/Form';
 
 
 
@@ -45,7 +46,14 @@ function App() {
         },
         {
           path: '/help',
-          element: <Help />
+          element: <Help />,
+          children: [
+            {
+              path: 'form',
+              element: <Form />
+            },
+
+          ]
         },
       ]
     }
