@@ -23,7 +23,7 @@ import Home2 from './Componenet2/NewRouter/Home2';
 // import { Navigate } from 'react-router-dom'
 // import A1 from './Componenet2/Router/A1'
 // import A2 from './Componenet2/Router/A2'
-import Navbar2 from './Componenet2/NewRouter/Navbar2'
+//import Navbar2 from './Componenet2/NewRouter/Navbar2'
 import Layout from './Componenet2/NewRouter/Layout';
 
 
