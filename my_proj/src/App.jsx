@@ -1,8 +1,8 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About2 from './Componenet2/Router/NewRouter/About2';
-import Help from './Componenet2/Router/NewRouter/Help';
-import Home2 from './Componenet2/Router/NewRouter/Home2';
+import About2 from './Componenet2/NewRouter/About2';
+import Help from './Componenet2/NewRouter/Help';
+import Home2 from './Componenet2/NewRouter/Home2';
 // import About from './Componenet2/Router/About'
 // import Blog from './Componenet2/Router/Blog'
 // //import Contact from './Componenet2/Router/Contact'
@@ -23,7 +23,8 @@ import Home2 from './Componenet2/Router/NewRouter/Home2';
 // import { Navigate } from 'react-router-dom'
 // import A1 from './Componenet2/Router/A1'
 // import A2 from './Componenet2/Router/A2'
-import Navbar2 from './Componenet2/Router/NewRouter/Navbar2'
+import Navbar2 from './Componenet2/NewRouter/Navbar2'
+import Layout from './Componenet2/NewRouter/Layout';
 
 
 
@@ -32,16 +33,22 @@ function App() {
   const rou = createBrowserRouter([
     {
       path: '/',
-      element: <Home2 />
-    },
-    {
-      path: '/about',
-      element: <About2 />
-    },
-    {
-      path: '/help',
-      element: <Help />
-    },
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home2 />
+        },
+        {
+          path: '/about',
+          element: <About2 />
+        },
+        {
+          path: '/help',
+          element: <Help />
+        },
+      ]
+    }
   ])
   return (
     <>
@@ -59,7 +66,8 @@ function App() {
       {/* <BasicRouter /> */}
 
       <RouterProvider router={rou} />
-      <Navbar2 />
+      {/* <Navbar2 /> */}
+
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
