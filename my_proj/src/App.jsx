@@ -41,7 +41,7 @@ function App() {
           element: <Home2 />
         },
         {
-          path: '/about',
+          path: '/about2',
           element: <About2 />,
           loader: () => {
             return fetch('https://jsonplaceholder.typicode.com/users')
