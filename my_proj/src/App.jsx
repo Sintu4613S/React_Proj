@@ -42,7 +42,10 @@ function App() {
         },
         {
           path: '/about',
-          element: <About2 />
+          element: <About2 />,
+          loader: () => {
+            return fetch('https://jsonplaceholder.typicode.com/users')
+          }
         },
         {
           path: '/help',
