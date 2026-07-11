@@ -1,8 +1,8 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About2 from './Componenet2/NewRouter/About2';
-import Help from './Componenet2/NewRouter/Help';
-import Home2 from './Componenet2/NewRouter/Home2';
+import About2 from './Componenet2/Router/NewRouter/About2';
+import Help from './Componenet2/Router/NewRouter/Help';
+import Home2 from './Componenet2/Router/NewRouter/Home2';
 // import About from './Componenet2/Router/About'
 // import Blog from './Componenet2/Router/Blog'
 // //import Contact from './Componenet2/Router/Contact'
@@ -24,8 +24,8 @@ import Home2 from './Componenet2/NewRouter/Home2';
 // import A1 from './Componenet2/Router/A1'
 // import A2 from './Componenet2/Router/A2'
 //import Navbar2 from './Componenet2/NewRouter/Navbar2'
-import Layout from './Componenet2/NewRouter/Layout';
-import Form from './Componenet2/NewRouter/Form';
+import Layout from './Componenet2/Router/NewRouter/Layout';
+import Form from './Componenet2/Router/NewRouter/Form';
 
 
 
