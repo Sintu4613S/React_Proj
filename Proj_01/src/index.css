@@ -1,4 +1,6 @@
-@import "tailwindcss";
+/* 1. Load Tailwind Engine */
+@import "tailwindcss" prefix(tw);
+
 
 /* :root {
   --text: #6b6375;
