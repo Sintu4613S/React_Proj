@@ -45,7 +45,8 @@ function App() {
           element: <About2 />,
           loader: () => {
             return fetch('https://jsonplaceholder.typicode.com/users')
-          }
+          },
+          HydrateFallback: () => null
         },
         {
           path: '/help',
