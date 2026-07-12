@@ -1,12 +1,16 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Loader from './Loader'
 const API = 'https://fakestoreapi.com/products'
 const Products = () => {
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(false)
   const fetchData = async () => {
     try {
+      setLoading(true)
       const response = await axios.get(API)
       setProducts(response.data)
+      setLoading(false)
     }
     catch (error) {
       console.error(error);
@@ -16,6 +20,7 @@ const Products = () => {
   useEffect(() => {
     fetchData();
   }, [])
+  if (loading) return <Loader />
   return (
     <>
       <div className='tw:grid tw:grid-cols-5 tw:gap-2 tw:max-[1200px]:grid-cols-4  tw:p-4 tw:max-[900px]:grid-cols-3 tw:max-[600px]:grid-cols-2 tw:max-[450px]:grid-cols-1'>
