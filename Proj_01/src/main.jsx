@@ -1,7 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { Mycontext } from './Component/StateManage/Mycontext.jsx'
+import { MyContextProvider } from './Component/StateManage/Mycontext.jsx'
+
+//import { Mycontext } from './Component/StateManage/Mycontext.jsx'
 // import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // import Products from './Component/Products.jsx'
 // import Home from './Component/Home.jsx'
@@ -40,8 +43,9 @@ import { Mycontext } from './Component/StateManage/Mycontext.jsx'
 // )
 createRoot(document.getElementById('root')).render(
   <>
-    <Mycontext.Provider value={"SintuKumar"}>
+    <MyContextProvider>
       <App />
-    </Mycontext.Provider>
+    </MyContextProvider>
+
   </>
 )
