@@ -2,9 +2,9 @@ import Wrapper from "./Wrapper"
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-neutral">
       <Wrapper>
-        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content grid-rows-2 p-10">
+        <footer className="footer sm:footer-horizontal  text-neutral-content grid-rows-2 p-10">
           <nav>
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Branding</a>
