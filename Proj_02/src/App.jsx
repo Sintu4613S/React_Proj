@@ -8,9 +8,9 @@ import News from './components/pages/News'
 function App() {
   return (
     <>
-      <Navbar />
-      <Category className="py-10" />
-      <News className="pb-10" />
+      <Navbar className={'sticky top-0 z-20'} />
+      <Category className={"py-10 sticky top-14 z-10 bg-base-100"} />
+      <News className={"pb-10"} />
       <Footer />
     </>
   )
