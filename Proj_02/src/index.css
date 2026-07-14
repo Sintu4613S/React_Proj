@@ -1,5 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
 /* 
 :root {
   --text: #6b6375;
