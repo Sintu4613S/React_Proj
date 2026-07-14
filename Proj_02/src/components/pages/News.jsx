@@ -5,7 +5,7 @@ import { useNewsContext } from "./context/NewsContex"
 
 const News = ({ className }) => {
   const { news, setNews, fetchNews } = useNewsContext()
-  console.log(news)
+  //console.log(news)
 
   useEffect(() => {
     (async () => {
@@ -36,8 +36,9 @@ const Newscard = ({ details }) => {
       <div className={`card bg-base-200 shadow-sm`}>
         <figure>
           <img
+            className=" w-full aspect-video object-contain"
             src={details?.urlToImage}
-            alt="Shoes" />
+            alt="Img" />
         </figure>
         <div className="card-body">
           <span className="text-xl text-green-600">{details.publishedAt}</span>
