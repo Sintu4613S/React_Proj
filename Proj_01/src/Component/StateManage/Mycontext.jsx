@@ -1,12 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext } from "react"
+import { createContext, useContext, useState } from "react"
 //Create th Context
 const Mycontext = createContext();
 
 //Provider
 const MyContextProvider = ({ children }) => {
+  const [count, setCount] = useState(0)
+  const value = {
+    count, setCount
+  }
   return (
-    <Mycontext.Provider value={"SintuKumar"}>
+    <Mycontext.Provider value={value}>
       {children}
     </Mycontext.Provider>
   )
