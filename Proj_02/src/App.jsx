@@ -1,10 +1,17 @@
 
 import './App.css'
+import Category from './components/Category'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import News from './components/pages/News'
 
 function App() {
   return (
     <>
-      <h1 className='bg-red-500'>Hello</h1>
+      <Navbar />
+      <Category className="py-10" />
+      <News className="pb-10" />
+      <Footer />
     </>
   )
 }
