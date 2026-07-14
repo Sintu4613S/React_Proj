@@ -1,8 +1,8 @@
 import Wrapper from "./Wrapper"
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
-    <div className="bg-base-300">
+    <div className={`bg-base-300  ${className}`}>
       <Wrapper>
         <div className="navbar  shadow-sm">
           <div className="flex-1">
