@@ -1,4 +1,3 @@
-
 import { useNewsContext } from "./NewsContex"
 import { useEffect, useState } from "react"
 
@@ -6,15 +5,14 @@ const Rightbar = () => {
   const { Isopen, setIsopen, fetchNews, } = useNewsContext()
   const [headline, setHeadline] = useState([])
   useEffect(() => {
-
-    if (Isopen) (
-      (async () => {
-        const response = await fetchNews("/top-headlines?q=india")
-        setHeadline(response.articles)
-        console.log(response)
-      })()
-    )
-
+    //if (Isopen) (
+    (async () => {
+      const response = await fetchNews("/top-headlines?q=india")
+      setHeadline(response.articles)
+      console.log(response)
+      // console.log(response.data)
+    })()
+    // )
 
   }, [])
   // console.log(news)
@@ -41,7 +39,7 @@ const Rightbar = () => {
             <ul className="menu min-h-full w-100 p-4 bg-base-300 ">
               {/* Sidebar content here */}
               <button className="absolute top-2 right-2 mb-6 text-2xl cursor-pointer" onClick={() => setIsopen(false)}>X</button>
-              <h1 className="m-10 text-center text-3xl font-extrabold text-shadow-mist-200">LatestHeadLines</h1>
+              <h1 className="m-10 text-center text-3xl font-extrabold text-gray-800">LatestHeadLines</h1>
               {headline.map((item, index) => {
                 return (
                   <div key={index} className="flex items-center gap-4
@@ -55,7 +53,6 @@ const Rightbar = () => {
                       <h3 className=" font-medium text-[15px] sm:text-[17px] text-blue-100 line-clamp-2">{item.title}</h3>
                     </div>
                   </div>
-
                 )
               })}
             </ul>
