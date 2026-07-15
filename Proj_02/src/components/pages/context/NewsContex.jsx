@@ -6,6 +6,8 @@ const NewsContext = createContext();
 const NewsContextProvider = ({ children }) => {
   const [news, setNews] = useState([])
   const [loading, setLoading] = useState(false)
+  const [Isopen, setIsopen] = useState(false)
+
   const fetchNews = async (url = '/everything?q=india') => {
     setLoading(true)
     try {
@@ -14,7 +16,7 @@ const NewsContextProvider = ({ children }) => {
       const response = await axios(`${apiUrl}${url}&apiKey=${apiKey}`)
       setLoading(false)
       return response.data
-      //console.log('object')
+      // console.log('object')
     } catch (error) {
       console.log(error)
       setLoading(false)
@@ -26,7 +28,9 @@ const NewsContextProvider = ({ children }) => {
     news,
     setNews,
     fetchNews,
-    loading
+    loading,
+    Isopen,
+    setIsopen
   }
   return (
     <NewsContext.Provider value={value}>
