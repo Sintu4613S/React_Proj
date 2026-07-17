@@ -33,9 +33,7 @@ const Rightbar = () => {
             {/* <label htmlFor="my-drawer-5" className="drawer-button btn btn-primary">Open drawer</label> */}
           </div>
           <div className="drawer-side px-0">
-            <label htmlFor="my-drawer-5" aria-label="close sidebar" className="drawer-overlay" onClick={() => setIsopen(false)}></label>
-
-
+            <label htmlFor="my-drawer-5" aria-label="close sidebar" className="drawer-overlay " onClick={() => setIsopen(false)}></label>
             <ul className="menu min-h-full w-100 p-4 bg-base-300 ">
               {/* Sidebar content here */}
               <button className="absolute top-2 right-2 mb-6 text-2xl cursor-pointer" onClick={() => setIsopen(false)}>X</button>
