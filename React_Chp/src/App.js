@@ -1,5 +1,7 @@
+import { useSelector } from 'react-redux';
 import './App.css';
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
+import Red from './Components/Redux/Red';
 //import HandleEvent from './Components/HandleEvent';
 //import Array2 from './Components/Array2';
 // import ToDoList from './Components/ToDoList';
@@ -11,24 +13,25 @@ import React, { useState } from 'react';
 //import Object from './Components/Object';
 //import Popup from "./Components/Popup";
 //import ToDo from './Components/ToDo';
-import Timer2 from './Components/Timer2';
-import Res2 from './Components/Res2';
-import Ques2 from './Components/Ques2';
+// import Timer2 from './Components/Timer2';
+// import Res2 from './Components/Res2';
+// import Ques2 from './Components/Ques2';
 function App() {
-  const [isOver, setIsOver] = useState(false)
-  const [score, setScore] = useState(0)
-
+  // const [isOver, setIsOver] = useState(false)
+  // const [score, setScore] = useState(0)
+  const state = useSelector((state) => { return state })
+  console.log(state)
   return (
     <>
-
-      <Timer2 setIsOver={setIsOver} />
+      <Red />
+      {/* <Timer2 setIsOver={setIsOver} />
       {
         !isOver ? (
           <Ques2 setIsOver={setIsOver} setScore={setScore} score={score} />
         ) : (
           <Res2 score={score} />
         )
-      }
+      } */}
       {/* <ToDo /> */}
       {/* <Popup /> */}
       {/* <HandleEvent /> */}
