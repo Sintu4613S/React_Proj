@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { productReducer } from '../productreducer'
 
 const Product = () => {
   const products = useSelector((state) => state?.productReducer?.products ?? [])
