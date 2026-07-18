@@ -4,9 +4,9 @@ export const addtoProduct = (details) => {
     payload: details,
   }
 }
-export const addtoCart = (details) => {
-  return {
-    type: 'ADD_TO_CART',
-    payload: details,
-  }
-}
+// export const addtoCart = (details) => {
+//   return {
+//     type: 'ADD_TO_CART',
+//     payload: details,
+//   }
+// }
