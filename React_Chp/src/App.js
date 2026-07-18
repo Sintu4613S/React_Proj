@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
+import { addtoProduct } from './Components/Redux/Action/productAction';
+import Product from './Components/Redux/Reducer/Productpage/Product';
+
 //import React, { useState } from 'react';
-import Red from './Components/Redux/Red';
 //import HandleEvent from './Components/HandleEvent';
 //import Array2 from './Components/Array2';
 // import ToDoList from './Components/ToDoList';
@@ -19,11 +21,20 @@ import Red from './Components/Redux/Red';
 function App() {
   // const [isOver, setIsOver] = useState(false)
   // const [score, setScore] = useState(0)
+  const dispach = useDispatch()
   const state = useSelector((state) => { return state })
+
+  const addProduct = () => {
+    dispach(addtoProduct({
+      id: 1,
+      name: 'Redmi'
+    }))
+
+  }
   console.log(state)
   return (
     <>
-      <Red />
+
       {/* <Timer2 setIsOver={setIsOver} />
       {
         !isOver ? (
@@ -46,6 +57,10 @@ function App() {
           )
 
       } */}
+      <h1 className='text-white'>Hello</h1>
+      <button onClick={addProduct}> Click </button>
+      <Product />
+
 
       {/* <Colorsw /> */}
       {/* <Hook /> */}
