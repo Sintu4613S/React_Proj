@@ -1,9 +1,10 @@
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import rootReducer from './Reducer';
 //Combine the Two Reducre or more than two
 
 let store = createStore(
   rootReducer,
+  applyMiddleware(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 );
