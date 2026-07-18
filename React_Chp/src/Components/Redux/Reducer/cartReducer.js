@@ -1,6 +1,5 @@
 const initialState = {
   cartProducts: [],
-  cart: []
 }
 export const cartReducer = (state = initialState, action) => {
   if (action.type === "ADD_TO_CART") {
