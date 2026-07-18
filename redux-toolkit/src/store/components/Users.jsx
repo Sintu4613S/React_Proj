@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { fetchUser } from "../feature/user/userSlice"
+import { fetchUser } from "../feature/thunk/fetchuser"
+
 
 const Users = () => {
   const dispatch = useDispatch()
