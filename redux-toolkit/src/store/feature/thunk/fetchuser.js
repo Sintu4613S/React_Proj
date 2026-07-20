@@ -5,10 +5,12 @@ export const fetchUser = createAsyncThunk(
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/users')
       const data = await response.json()
-      console.log(data)
+      //console.log(data)
+      return data
 
     } catch (error) {
       console.log("Error Occured", error)
+      throw error;
 
     }
   })
