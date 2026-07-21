@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux'
 import { selectAllPosts } from '../post/postSlice'
 import ContentForm from './ContentForm'
+import PostAuth from '../post/PostAuth'
+
 const PostList = () => {
   // const pureState = useSelector(state => state)
   // console.log("Mere Store ka aslo data:", pureState)
@@ -10,6 +12,9 @@ const PostList = () => {
     <article key={post.id} className=' w-full max-w-sm border p-4 rounded-lg break-word  border-red-600'>
       <h1>{post.title}</h1>
       <p >{post.content.substring(0, 100)}</p>
+      <p className='m-2'>
+        <PostAuth userId={post.userId} />
+      </p>
     </article>
 
   ))
