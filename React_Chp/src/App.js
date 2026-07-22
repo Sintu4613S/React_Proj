@@ -1,9 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
-import { addtoProduct } from './Components/Redux/Action/productAction';
-import Product from './Components/Redux/Reducer/Productpage/Product';
-
-//import React, { useState } from 'react';
+import React, { useState } from 'react';
 //import HandleEvent from './Components/HandleEvent';
 //import Array2 from './Components/Array2';
 // import ToDoList from './Components/ToDoList';
@@ -19,23 +15,13 @@ import Product from './Components/Redux/Reducer/Productpage/Product';
 // import Res2 from './Components/Res2';
 // import Ques2 from './Components/Ques2';
 function App() {
-  // const [isOver, setIsOver] = useState(false)
-  // const [score, setScore] = useState(0)
-  const dispach = useDispatch()
-  const state = useSelector((state) => { return state })
+  const [isOver, setIsOver] = useState(false)
+  const [score, setScore] = useState(0)
 
-  const addProduct = () => {
-    dispach(addtoProduct({
-      id: 1,
-      name: 'Redmi'
-    }))
-
-  }
-  console.log(state)
   return (
     <>
 
-      {/* <Timer2 setIsOver={setIsOver} />
+      <Timer2 setIsOver={setIsOver} />
       {
         !isOver ? (
           <Ques2 setIsOver={setIsOver} setScore={setScore} score={score} />
