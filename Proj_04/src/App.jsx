@@ -1,4 +1,5 @@
 import './App.css'
+import Employees from './components/employees/Employees'
 import Footer from './components/footer/Footer'
 import Layout from './components/layout/Layout'
 import NavBar from './components/navbar/NavBar'
@@ -10,9 +11,8 @@ function App() {
     // <Layout>
     <div className='w-full min-h-screen flex flex-col'>
       <NavBar />
-      <div className='flex-1'>
-        <h1>Hloo.....</h1>
-
+      <div className='flex-1 py-10'>
+        <Employees />
       </div>
       <Footer />
     </div>
