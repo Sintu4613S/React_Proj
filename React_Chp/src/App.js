@@ -15,12 +15,12 @@ import React, { useState } from 'react';
 // import Res2 from './Components/Res2';
 // import Ques2 from './Components/Ques2';
 function App() {
-  const [isOver, setIsOver] = useState(false)
-  const [score, setScore] = useState(0)
+  // const [isOver, setIsOver] = useState(false)
+  // const [score, setScore] = useState(0)
 
   return (
     <>
-
+      {/* 
       <Timer2 setIsOver={setIsOver} />
       {
         !isOver ? (
@@ -28,7 +28,7 @@ function App() {
         ) : (
           <Res2 score={score} />
         )
-      } */}
+      }  */}
       {/* <ToDo /> */}
       {/* <Popup /> */}
       {/* <HandleEvent /> */}
@@ -44,8 +44,8 @@ function App() {
 
       } */}
       <h1 className='text-white'>Hello</h1>
-      <button onClick={addProduct}> Click </button>
-      <Product />
+      {/* <button onClick={addProduct}> Click </button>
+      <Product /> */}
 
 
       {/* <Colorsw /> */}
