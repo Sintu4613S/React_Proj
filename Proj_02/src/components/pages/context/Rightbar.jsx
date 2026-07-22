@@ -37,7 +37,7 @@ const Rightbar = () => {
             <ul className="menu min-h-full w-100 p-4 bg-base-300 ">
               {/* Sidebar content here */}
               <button className="absolute top-2 right-2 mb-6 text-2xl cursor-pointer" onClick={() => setIsopen(false)}>X</button>
-              <h1 className="m-10 text-center text-3xl font-extrabold text-gray-800">LatestHeadLines</h1>
+              <h1 className="m-10 text-center text-3xl font-extrabold text-white">Latest HeadLines</h1>
               {headline.map((item, index) => {
                 return (
                   <div key={index} className="flex items-center gap-4
