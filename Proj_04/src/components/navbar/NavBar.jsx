@@ -1,6 +1,11 @@
+import { useDispatch } from "react-redux"
 import Layout from "../layout/Layout"
+import { openEmployePopup } from "../../features/popup/popSlice";
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+
+
   return (
     <div className="bg-base-100 sticky top-0 z-10">
       <Layout>
