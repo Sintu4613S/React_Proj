@@ -1,7 +1,7 @@
-
 import { configureStore } from '@reduxjs/toolkit'
-const store = configureStore({
+import popReducer from '../features/popup/popSlice'
+export const store = configureStore({
   reducer: {
-
+    popup: popReducer,
   }
 })
