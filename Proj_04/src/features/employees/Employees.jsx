@@ -3,8 +3,12 @@ import React from 'react'
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Layout from '../../components/layout/Layout';
+import { useDispatch } from 'react-redux';
+import { openDeletePopup } from '../popup/popSlice';
+
 
 const Employees = () => {
+
   return (
     <div>
       <Layout>
@@ -30,6 +34,7 @@ const Employees = () => {
 export default Employees
 
 const EmployeeCard = () => {
+  const dispatch = useDispatch()
   return (
     <ul className="list bg-base-100 rounded-box shadow-md">
       <li className="list-row">
@@ -44,7 +49,7 @@ const EmployeeCard = () => {
         <button className="btn btn-square btn-ghost">
           <FiEdit />
         </button>
-        <button className="btn btn-square btn-ghost">
+        <button onClick={() => dispatch(openDeletePopup())} className="btn btn-square btn-ghost">
           <RiDeleteBin6Line />
         </button>
         <button className="btn btn-square btn-ghost">
