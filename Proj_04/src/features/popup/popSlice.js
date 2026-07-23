@@ -25,5 +25,5 @@ const popupSlice = createSlice({
 
 // export const allPopUps = state => state.pops
 export const { openEmployePopup, closeEmployepopup } = popupSlice.actions
-
+//export const selectAllPopup = (state) => state.popup
 export default popupSlice.reducer
