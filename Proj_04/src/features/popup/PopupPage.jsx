@@ -13,8 +13,8 @@ const PopupPage = () => {
 
   return (
     <div onClick={() => dispatch(closeEmployepopup())}
-      className='fixed top-0 w-full h-full bg-black/80 flex items-center justify-center z-30 '>
-      <fieldset onClick={(e) => e.stopPropagation()} className="fieldset  rounded-box w-sm border p-4">
+      className='fixed top-0 w-full h-full bg-black/80 flex items-center justify-center z-20 '>
+      <fieldset onClick={(e) => e.stopPropagation()} className="fieldset  rounded-box max-w-sm border p-4">
         <legend className="fieldset-legend text-xl">Employee Details</legend>
         <label className="label text-2xl" htmlFor="url">Profile Url</label>
         <input type="text" id="url" className="input text-xl" placeholder="Url.." />
