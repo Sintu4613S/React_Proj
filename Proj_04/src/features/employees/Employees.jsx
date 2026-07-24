@@ -3,30 +3,19 @@ import React from 'react'
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Layout from '../../components/layout/Layout';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openDeletePopup } from '../popup/popSlice';
 import { openEdittab } from '../edit/editSlice';
 
 
 const Employees = () => {
+  const employeeDetails = useSelector(state => state.employee.employees)
+  //console.log(" m kya h", employeeDetails)
 
   return (
     <div>
       <Layout>
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard /> <EmployeeCard /> <EmployeeCard /> <EmployeeCard />
-        <EmployeeCard /> <EmployeeCard /> <EmployeeCard />
-        <EmployeeCard />
-
-
+        {employeeDetails.map((details) => <EmployeeCard details={details} key={details.id} />)}
       </Layout>
     </div>
   )
@@ -34,18 +23,19 @@ const Employees = () => {
 
 export default Employees
 
-const EmployeeCard = () => {
+const EmployeeCard = ({ details }) => {
+  //console.log('Ab kya h isme', details)
   const dispatch = useDispatch()
   return (
     <ul className="list bg-base-100 rounded-box shadow-md">
       <li className="list-row">
-        <div><img className="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp" /></div>
+        <div><img className="size-10 rounded-box" src={details.profleurl} /></div>
         <div>
-          <div>Dio Lupa</div>
-          <div className="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
+          <div>{details.name}</div>
+          <div className="text-xs uppercase font-semibold opacity-60">{details.email}</div>
         </div>
         <p className="list-col-wrap text-xs">
-          "Remaining Reason" became an instant hit, praised for its haunting sound and emotional depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s most iconic tracks.
+          {details.bio}
         </p>
         <button onClick={() => dispatch(openEdittab())} className="btn btn-square btn-ghost">
           <FiEdit />
