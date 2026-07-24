@@ -16,8 +16,8 @@ const DeleteDetails = () => {
           <h2 className="card-title">Delete!</h2>
           <p>Are You Sure Want to delete?</p>
           <div className="card-actions">
-            <button className="btn btn-primary">No</button>
-            <button className="btn btn-error">yes</button>
+            <button className="btn btn-error">Yes</button>
+            <button onClick={() => dispatch(closeDeletepopup())} className="btn btn-primary">No</button>
           </div>
         </div>
       </div>
