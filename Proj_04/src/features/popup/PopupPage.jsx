@@ -13,15 +13,15 @@ const PopupPage = () => {
 
   return (
     <div onClick={() => dispatch(closeEmployepopup())}
-      className='fixed top-0 w-full h-full bg-black/80 flex items-center justify-center z-20 '>
-      <fieldset onClick={(e) => e.stopPropagation()} className="fieldset  rounded-box max-w-sm border p-4">
-        <legend className="fieldset-legend text-xl">Employee Details</legend>
-        <label className="label text-2xl" htmlFor="url">Profile Url</label>
-        <input type="text" id="url" className="input text-xl" placeholder="Url.." />
-        <label className="label text-2xl" htmlFor="name">Name</label>
-        <input type="text" id="name" className="input text-xl" placeholder="Enter Name..." />
+      className='fixed top-1 w-full h-full bg-black/80 flex items-center justify-center z-20 '>
+      <fieldset onClick={(e) => e.stopPropagation()} className="fieldset  rounded-box max-w-sm w-sm border p-4">
+        <legend className="fieldset-legend text-sm">Employee Details</legend>
+        <label className="label text-sm" htmlFor="url">Profile Url</label>
+        <input type="text" id="url" className="input text-sm w-full p-3.5" placeholder="Url.." />
+        <label className="label text-sm" htmlFor="name">Name</label>
+        <input type="text" id="name" className="input text-sm w-full p-3.5" placeholder="Enter Name..." />
 
-        <label className="label text-2xl" htmlFor="email">Email</label>
+        <label className="label text-sm" htmlFor="email">Email</label>
         <label className="input validator">
           <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g
@@ -36,14 +36,14 @@ const PopupPage = () => {
             </g>
           </svg>
           <input
-            className='text-xl'
+            className='text-sm w-full p-3.5'
             type="email" id="email"
             placeholder="mail@site.com" required />
         </label>
-        <div className="validator-hint hidden text-xl">Enter valid email address</div>
-        <label className="label text-2xl"> Bio</label>
-        <textarea className="textarea h-24 text-xl " placeholder="Bio" />
-        <button className="btn btn-neutral mt-4 text-2xl bg-base-300">Create</button>
+        <div className="validator-hint hidden text-sm">Enter valid email address</div>
+        <label className="label text-sm "> Bio</label>
+        <textarea className="textarea h-24 text-sm w-full p-3.5 " placeholder="Bio" />
+        <button className="btn btn-neutral mt-4 text-sm bg-base-300">Create</button>
       </fieldset>
     </div>
   )
