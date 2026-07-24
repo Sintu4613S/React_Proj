@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     dispatch(getEmployees())
 
-  })
+  }, [])
   return (
     // <Layout>
     <div className='w-full min-h-screen flex flex-col'>
